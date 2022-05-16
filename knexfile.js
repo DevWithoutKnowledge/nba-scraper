@@ -1,9 +1,15 @@
-// Update with your config settings.
+// // Update with your config settings.
+// import path from 'path';
+// import { fileURLToPath } from 'url';
 
+// const __filename = fileURLToPath(import.meta.url);
+
+// // 👇️ "/home/john/Desktop/javascript"
+// const __dirname = path.dirname(__filename);
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-module.exports = {
+ module.exports = {
 
   development: {
     client: 'pg',
@@ -22,4 +28,4 @@ module.exports = {
     }
   }
 
-};
+}

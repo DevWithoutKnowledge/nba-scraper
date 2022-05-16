@@ -14,4 +14,4 @@
     resolve(schedule)
     await newPage.close()
 })
-module.exports = getScheduleUrls
+export default getScheduleUrls

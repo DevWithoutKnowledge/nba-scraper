@@ -1,15 +1,15 @@
-const pageSraper = require('./pageScraper')
+import pageScraper  from './pageScraper.mjs'
 
 async function scrapeAll(browserInstance){
     let browser
     try {
 
         browser = await browserInstance
-        await pageSraper.scraper(browser)
+        await pageScraper(browser)
 
     } catch (e) {
         console.log("Could not resolve", e)
     }
 }
 
-module.exports = (browserInstance) => scrapeAll(browserInstance)
+export default (browserInstance) => scrapeAll(browserInstance)

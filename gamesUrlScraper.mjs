@@ -12,4 +12,4 @@ let getGamesUrls = (link, browser) => new Promise(async(resolve, reject) => {
     resolve(games)
     await newPage.close()
 })
-module.exports = getGamesUrls
+export default getGamesUrls

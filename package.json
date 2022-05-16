@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
+    "start": "node index.mjs",
     "migrate": "knex migrate:latest --knexfile nba-scraper/knexfile.js",
     "unmigrate": "knex migrate:rollback",
     "seed": "knex seed:run "
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/DevWithoutKnowledge/nba-scraper#readme",
   "dependencies": {
     "knex": "^1.0.3",
+    "p-limit": "^4.0.0",
     "pg": "^8.7.3",
     "puppeteer": "^13.1.3"
   }
