@@ -1,6 +1,6 @@
-import startBrowser  from './browser.mjs';
-import scraperController from './pageController.mjs';
+import startBrowser from './browser.mjs'
+import scraperController from './pageController.mjs'
 
-let browserInstance = startBrowser()
+const browserInstance = startBrowser()
 
 scraperController(browserInstance)

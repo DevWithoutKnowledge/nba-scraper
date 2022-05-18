@@ -11,7 +11,7 @@ exports.up = function (knex) {
     .createTable('games', function (table) {
       table.increments('id')
       table.integer('season_id').references('id').inTable('seasons')
-      table.string('game_name') //in url
+      table.string('game_name') // in url
       table.date('game_date')
       table.string('home', 4)
       table.string('away', 4)
@@ -26,13 +26,13 @@ exports.up = function (knex) {
       table.string('mp', 8)
       table.float('fg', 8)
       table.float('fga', 8)
-      table.decimal('fg_pct', 8, 3) //calculate yourself
+      table.decimal('fg_pct', 8, 3) // calculate yourself
       table.float('three_p', 8)
       table.float('three_pa', 8)
-      table.decimal('three_p_pct', 8, 3) //calculate yourself
+      table.decimal('three_p_pct', 8, 3) // calculate yourself
       table.float('ft', 8)
       table.float('fta', 8)
-      table.decimal('ft_pct', 8, 3) //calculate yourself
+      table.decimal('ft_pct', 8, 3) // calculate yourself
       table.float('orb', 8)
       table.float('drb', 8)
       table.float('trb', 8)
@@ -44,14 +44,14 @@ exports.up = function (knex) {
       table.float('pts', 8)
       table.string('plus_minus', 8)
     })
-    //Think how to loop with _ids. what is the solution
+    // Think how to loop with _ids. what is the solution
     .createTable('advBoxscores', function (table) {
       table.increments('id')
       table.integer('game_id').references('id').inTable('games')
       table.string('team_name', 4)
       table.string('player_id', 16)
       table.string('player_name', 128)
-      table.string('mp', 8) //time maybe?? look how time works
+      table.string('mp', 8) // time maybe?? look how time works
       table.decimal('ts_pct', 8, 3)
       table.decimal('efg_pct', 8, 3)
       table.decimal('three_par', 8, 3)
@@ -74,7 +74,7 @@ exports.up = function (knex) {
  * @param { import("knex").Knex } knex
  * @returns { Promise<vo_id> }
  */
- exports.down = function (knex) {
+exports.down = function (knex) {
   return knex.schema
     .dropTable('boxscores')
     .dropTable('advBoxscores')
