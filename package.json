@@ -9,7 +9,9 @@
     "migrate": "knex migrate:latest --knexfile nba-scraper/knexfile.js",
     "unmigrate": "knex migrate:rollback",
     "seed": "knex seed:run ",
-    "knex-query": "node knexQuery.mjs"
+    "knex-query": "node ./datasetScripts/knexQuery.mjs",
+    "update_date": "node knexInsert.mjs",
+    "dataset-scripts": "node ./datasetScripts/threeScriptsExecuter.mjs"
   },
   "repository": {
     "type": "git",

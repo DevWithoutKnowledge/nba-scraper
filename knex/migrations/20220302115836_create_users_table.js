@@ -1,6 +1,6 @@
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<vo_id> }
+ * @returns { Promise<void> }
  */
 exports.up = function (knex) {
   return knex.schema
@@ -72,7 +72,7 @@ exports.up = function (knex) {
 
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<vo_id> }
+ * @returns { Promise<void> }
  */
 exports.down = function (knex) {
   return knex.schema

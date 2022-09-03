@@ -44,11 +44,12 @@ const scraperObject = {
 
         const promises = currentScheduleUrls.map(url => {
           // wrap the function we are calling in the limit function we defined above
-          return limit(async () => await gameScrapAndSave(myLogger, browser, seasonId[0]['id'], url))
+          // if not working change back to seasonId[0]['id']
+          return limit(async () => await gameScrapAndSave(myLogger, browser, seasonId[0].id, url))
         })
         // new loop (for game in games) using Promise.all
         await (async () => {
-          let result = await Promise.all(promises)
+          await Promise.all(promises)
         })()
       }
     }
